@@ -6,7 +6,7 @@
 
 .body {
   font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
+  background: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
@@ -17,7 +17,9 @@ a {
 }
 
 .hero {
-  background-color: #09b3c3;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
   padding: 0;
   margin: 0;
+  font-family: "Delius Swash Caps", Arial, sans-serif;
+  text-align: center;
 }
