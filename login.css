@@ -1,27 +1,24 @@
 /* General styles */
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(
-    135deg,
-    #6a82fb,
-    #fc5c7d
-  ); /* Gradient background */
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0;
   color: #333;
 }
 
 /* Form container */
 .form-container {
-  width: 100%;
-  max-width: 500px;
+  min-width: 500px;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 /* Glassmorphism effect for form */
@@ -36,6 +33,7 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
+  margin: 0;
 }
 
 .form:hover {
@@ -46,73 +44,67 @@ body {
 .form__title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #fff;
-  margin-bottom: 1.5rem;
+  color: #333;
+  margin: 0 0 1.5rem 0;
   text-align: center;
+  padding: 0;
 }
 
 /* Form fields */
 .form__fieldset {
-  margin-bottom: 1.5rem;
+  margin: 0;
+  padding: 0;
   border: none;
   display: flex;
   flex-direction: column;
 }
 
 .form__fieldset--remember-me {
+  margin: 0;
+  padding: 0;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .form__input {
   background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
   border: 1px solid #cfcfcf;
   box-sizing: border-box;
   padding: 1rem;
-  margin-bottom: 1rem;
   border-radius: 30px;
   color: #333;
-  width: 100%;
+  margin: 0 0 1rem 0;
 }
 
-/* Focus effect */
-.form__input--text:focus,
-.form__input--password:focus {
-  outline-color: #2f71e5;
-  outline-style: solid;
-  outline-width: 1px;
-}
-
-.form__input--checkbox {
-  margin-right: 0.5rem;
-  vertical-align: middle;
+.form__input:focus {
+  outline: 1px solid #2f71e5;
 }
 
 .form__label--remember-me {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 0.25rem;
+  margin: 0.25rem 0 0 0;
+  padding: 0;
 }
 
-/* Buttons */
 .form__actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
-.form__button--submit,
-.form__button--reset {
+.form__button {
+  cursor: pointer;
   flex: 1;
   min-width: 100px;
+  padding: 0.5rem 1rem;
+  margin: 0;
 }
 
 .form__button--submit {
@@ -157,6 +149,7 @@ body {
   font-size: 1rem;
   line-height: 1.25rem;
   margin-bottom: 0.5rem;
+  padding: 0;
 }
 
 @media screen and (max-width: 480px) {
@@ -175,6 +168,6 @@ body {
 
   .form__button--submit,
   .form__button--reset {
-    width: 100%;
+    width: 70%;
   }
 }
