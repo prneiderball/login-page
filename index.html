@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link href="login.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="form" action="#" method="post">
+        <h1 class="form__title">Log In</h1>
+
+        <!-- Username fieldset -->
+        <fieldset class="form__fieldset">
+          <label for="username" class="form__label">Username</label>
+          <input
+            type="text"
+            class="form__input form__input--text"
+            id="username"
+            name="username"
+            placeholder="ex: johndoe123"
+            required
+          />
+        </fieldset>
+
+        <!-- Password fieldset -->
+        <fieldset class="form__fieldset">
+          <label for="password" class="form__label">Password</label>
+          <input
+            type="password"
+            class="form__input form__input--password"
+            id="password"
+            name="password"
+            placeholder="Type your password"
+            required
+          />
+        </fieldset>
+
+        <!-- Remember me checkbox -->
+        <fieldset class="form__fieldset form__fieldset--remember-me">
+          <input
+            type="checkbox"
+            class="form__input form__input--checkbox"
+            name="remember-me"
+            id="remember-me"
+          />
+          <label for="remember-me" class="form__label form__label--remember-me"
+            >Remember me</label
+          >
+        </fieldset>
+
+        <!-- Form actions -->
+        <div class="form__actions">
+          <button type="submit" class="form__button--submit">Log In</button>
+          <button type="reset" class="form__button--reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
