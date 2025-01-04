@@ -1,14 +1,49 @@
+/* Define custom properties (CSS variables) */
+:root {
+  --text: #fefefe;
+  --background: #252525;
+  --primary: #fbf7f7;
+  --secondary: #f1e9e3;
+  --accent: #df9234;
+}
+
 /* General styles */
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent),
+    var(--secondary)
+  );
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: var(--text);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Enhanced background gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Form container */
@@ -44,7 +79,7 @@ body {
 .form__title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text);
   margin: 0 0 1.5rem 0;
   text-align: center;
   padding: 0;
@@ -99,46 +134,43 @@ body {
   margin-top: 1rem;
 }
 
+.span {
+  justify-content: space-between;
+}
+
 .form__button {
   cursor: pointer;
   flex: 1;
   min-width: 100px;
   padding: 0.5rem 1rem;
   margin: 0;
-}
-
-.form__button--submit {
-  background: #2f71e5;
   border-radius: 100px;
-  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   border: none;
+  background: var(--accent);
+  color: var(--background);
   transition: all 0.3s ease;
 }
 
-.form__button--submit:hover {
-  background: #1e5bb0;
+/* Common hover effect for both buttons */
+.form__button:hover {
+  background: #d96b26;
   transform: scale(1.05);
 }
 
 .form__button--reset {
   background: none;
-  border: 2px solid #2f71e5;
-  border-radius: 100px;
-  color: #2f71e5;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
 
 .form__button--reset:hover {
-  background: #2f71e5;
-  color: white;
-  transform: scale(1.05);
+  background: var(--accent);
+  color: var(--background);
 }
 
+/* Input placeholder styling */
 .form__input::placeholder {
   font-size: 1rem;
   color: #8b8b8b;
