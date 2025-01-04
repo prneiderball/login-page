@@ -1,25 +1,44 @@
-# Login Form Project
+# Login Form with Dynamic Styling
 
-This is a **Login Form** with a visually appealing **Glassmorphism** style, built using **HTML** and **CSS**. The design utilizes a sleek, blurred background with subtle shadow effects, making it modern and professional. The form includes a username field, password field, a "Remember Me" checkbox, and submit/reset buttons.
+## Overview
+
+This project is a modern login form designed with a focus on aesthetic appeal and responsiveness. It incorporates **glassmorphism**, **responsive design**, and **subtle animations** to create an engaging user experience. The form is ideal for showcasing advanced CSS skills while adhering to clean, maintainable code principles.
 
 ## Features
-- **Responsive Design**: The form adapts to different screen sizes, ensuring usability across devices.
-- **Glassmorphism Effect**: A frosted-glass appearance with a subtle blur effect for an elegant, modern design.
-- **Form Validation**: The username and password fields are required for submission.
-- **Action Buttons**: Includes submit and reset buttons to manage form actions.
 
-## Files
-1. **index.html**: The main HTML structure for the login form.
-2. **login.css**: Stylesheet that defines the Glassmorphism design and layout for the form.
-3. **normalize.css**: A CSS reset to normalize default browser styles.
+- **Glassmorphism Design**: The form uses a semi-transparent, frosted-glass aesthetic.
+- **Animated Gradient Background**: A dynamic and visually pleasing gradient animation enhances the overall appeal.
+- **Responsive Design**: The layout adjusts seamlessly to various screen sizes, ensuring usability on desktops and mobile devices.
+- **Interactive Elements**: Buttons and inputs include hover effects and focus styles for better user interaction.
+- **Custom Properties**: CSS variables (`:root`) make the design easily adaptable to different themes.
 
-## Usage
-1. Clone or download the project files.
-2. Open the `index.html` file in your browser to view the form.
-3. You can further customize the form by modifying the HTML structure and CSS styles.
+## Tech Stack
 
-## How to Contribute
-Feel free to fork this repository and submit pull requests with any improvements or fixes!
+- **HTML5**: For semantic structure.
+- **CSS3**: For styling, animations, and responsive design.
+  - **CSS Variables**: Enable dynamic theming.
+  - **Keyframe Animations**: Provide smooth gradient transitions.
+  - **Media Queries**: Ensure responsiveness across devices.
+- **Normalize.css**: To standardize styling across browsers.
 
-## License
-This project is open-source and available under the [MIT License](LICENSE).
+## How to Use
+
+1. Clone the repository and open the project in your preferred editor.
+2. Include `normalize.css` and `login.css` in your project directory.
+3. Open the `index.html` file in any modern browser to view the form.
+
+**link**: https://prneiderball.github.io/login-page/
+
+## Customization
+
+To change the theme colors, edit the custom properties in the `:root` section of `login.css`:
+
+```css
+:root {
+  --text: #fbf7f7;
+  --background: #252525;
+  --primary: #fbf7f7;
+  --secondary: #f1e9e3;
+  --accent: #df9234;
+}
+```
