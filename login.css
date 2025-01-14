@@ -1,12 +1,10 @@
 /* Define custom properties (CSS variables) */
 :root {
-  :root {
-    --text: #fbf7f7;
-    --background: #252525;
-    --primary: #f8f3ed;
-    --secondary: #e4dcd4;
-    --accent: #cba96a;
-  }
+  --text: #ffffff;
+  --background: #1a1a2e;
+  --primary: #16213e;
+  --secondary: #0f3460;
+  --accent: #e94560;
 }
 
 /* General styles */
