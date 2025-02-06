@@ -110,7 +110,7 @@ body {
   padding: 1rem;
   border-radius: 30px;
   color: #333;
-  margin: 0 0 1rem 0;
+  margin: 0 0 8px 0;
 }
 
 .form__input:focus {
