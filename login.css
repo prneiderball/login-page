@@ -1,20 +1,18 @@
-/* Define custom properties (CSS variables) */
 :root {
-  --text: #ffffff;
-  --background: #1a1a2e;
-  --primary: #16213e;
-  --secondary: #0f3460;
-  --accent: #e94560;
+  --text-color: #ffffff;
+  --background-color: #1a1a2e;
+  --primary-color: #16213e;
+  --secondary-color: #0f3460;
+  --accent-color: #e94560;
 }
 
-/* General styles */
 body {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(
     135deg,
-    var(--primary),
-    var(--accent),
-    var(--secondary)
+    var(--primary-color),
+    var(--accent-color),
+    var(--secondary-color)
   );
   display: flex;
   justify-content: center;
@@ -22,31 +20,23 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  color: var(--text);
-  background-size: 400% 400%;
+  color: var(--text-color);
+  background-size: 300% 300%;
   animation: gradientShift 15s ease infinite;
 }
 
-/* Enhanced background gradient animation */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
-  25% {
-    background-position: 50% 100%;
-  }
   50% {
     background-position: 100% 50%;
-  }
-  75% {
-    background-position: 50% 0%;
   }
   100% {
     background-position: 0% 50%;
   }
 }
 
-/* Form container */
 .form-container {
   min-width: 500px;
   padding: 20px;
@@ -56,7 +46,6 @@ body {
   margin: 0;
 }
 
-/* Glassmorphism effect for form */
 .form {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
@@ -75,20 +64,18 @@ body {
   transform: translateY(-10px);
 }
 
-/* Form title */
 .form__title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--text-color);
   margin: 0 0 1.5rem 0;
   text-align: center;
   padding: 0;
 }
 
-/* Form fields */
 .form__fieldset {
-  margin: 0;
-  padding: 0;
+  margin: 2px;
+  padding: 2px;
   border: none;
   display: flex;
   flex-direction: column;
@@ -104,7 +91,6 @@ body {
 
 .form__input {
   background: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
   border: 1px solid #cfcfcf;
   box-sizing: border-box;
   padding: 1rem;
@@ -114,14 +100,15 @@ body {
 }
 
 .form__input:focus {
-  outline: 1px solid #2f71e5;
+  outline: none;
+  box-shadow: 0 0 0 2px #2f71e5;
 }
 
 .form__label--remember-me {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
-  margin: 0.25rem 0 0 0;
+  margin: 0 0 16px 0;
   padding: 0;
 }
 
@@ -134,10 +121,6 @@ body {
   margin-top: 1rem;
 }
 
-.span {
-  justify-content: space-between;
-}
-
 .form__button {
   cursor: pointer;
   flex: 1;
@@ -148,12 +131,11 @@ body {
   font-size: 1rem;
   font-weight: 600;
   border: none;
-  background: var(--accent);
-  color: var(--background);
+  background: var(--accent-color);
+  color: var(--background-color);
   transition: all 0.3s ease;
 }
 
-/* Common hover effect for both buttons */
 .form__button:hover {
   background: #d96b26;
   transform: scale(1.05);
@@ -161,16 +143,15 @@ body {
 
 .form__button--reset {
   background: none;
-  border: 2px solid var(--accent);
-  color: var(--accent);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 .form__button--reset:hover {
-  background: var(--accent);
-  color: var(--background);
+  background: var(--accent-color);
+  color: var(--background-color);
 }
 
-/* Input placeholder styling */
 .form__input::placeholder {
   font-size: 1rem;
   color: #8b8b8b;
@@ -184,7 +165,6 @@ body {
   padding: 0;
 }
 
-/* responsive breakpoints */
 @media screen and (max-width: 768px) {
   .form-container {
     min-width: 300px;
