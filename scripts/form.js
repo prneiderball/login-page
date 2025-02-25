@@ -1,4 +1,4 @@
-export function initForm() {
+function initForm() {
   const form = document.querySelector(".form");
   const usernameInput = document.getElementById("username");
   const passwordInput = document.getElementById("password");
@@ -53,3 +53,5 @@ export function initForm() {
     this.style.borderColor = this.value.trim().length < 3 ? "red" : "green";
   });
 }
+
+export default initForm;
