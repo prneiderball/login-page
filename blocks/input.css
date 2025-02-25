@@ -1,0 +1,19 @@
+.form__input {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 30px;
+  padding: 1rem;
+  color: #333;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2f71e5;
+}
+
+.form__input::placeholder {
+  font-size: 1rem;
+  color: #8b8b8b;
+}

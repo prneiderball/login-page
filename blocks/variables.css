@@ -1,0 +1,10 @@
+:root {
+  --text-color: #ffffff;
+  --background-color: #1a1a2e;
+  --primary-color: #16213e;
+  --secondary-color: #0f3460;
+  --accent-color: #e94560;
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --input-border: #cfcfcf;
+  --button-hover: #d96b26;
+}
