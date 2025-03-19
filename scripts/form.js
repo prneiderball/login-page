@@ -1,9 +1,9 @@
-function initForm() {
+export function initForm() {
   const form = document.querySelector(".form");
   const usernameInput = document.getElementById("username");
   const passwordInput = document.getElementById("password");
+  const resetBtn = document.querySelector(".form__button--reset");
 
-  // Create or select the message div
   let messageDiv = document.getElementById("message");
   if (!messageDiv) {
     messageDiv = document.createElement("div");
@@ -12,13 +12,11 @@ function initForm() {
     document.querySelector(".form-container").appendChild(messageDiv);
   }
 
-  // Function to show messages
   const showMessage = (msg, color) => {
     messageDiv.textContent = msg;
     messageDiv.style.color = color;
   };
 
-  // Form validation
   const validateForm = () => {
     let isValid = true;
     let errorMessages = [];
@@ -31,13 +29,13 @@ function initForm() {
       errorMessages.push("Password is required.");
       isValid = false;
     }
+
     if (!isValid) {
       showMessage(errorMessages.join(" "), "red");
     }
     return isValid;
   };
 
-  // Submit event listener
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (validateForm()) {
@@ -48,10 +46,18 @@ function initForm() {
     }
   });
 
-  // Username input listener
   usernameInput.addEventListener("input", function () {
     this.style.borderColor = this.value.trim().length < 3 ? "red" : "green";
   });
-}
 
-export default initForm;
+  // Reset button clears input fields
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      usernameInput.value = "";
+      passwordInput.value = "";
+      usernameInput.style.borderColor = "";
+      passwordInput.style.borderColor = "";
+      messageDiv.textContent = "";
+    });
+  }
+}
